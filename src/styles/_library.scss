@@ -7,6 +7,9 @@
   background-color: white;
   box-shadow: 2px 2px 50px rgb(204, 204, 204);
   overflow: scroll;
+  transform: translateX(-100%);
+  transition: all .5s ease;
+  opacity: 0;
 
   h2 {
     padding: 2rem;
@@ -18,6 +21,7 @@
   cursor: pointer;
   align-items: center;
   padding: 1rem 2rem;
+  transition: background .5s ease;
 
   img {
     width: 30%;
@@ -61,4 +65,15 @@
 
 .selected {
   background: rgb(168, 195, 255);
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
 }

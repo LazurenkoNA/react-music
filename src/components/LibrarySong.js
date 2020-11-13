@@ -3,25 +3,16 @@ import React from 'react'
 const LibrarySong = ({
   song, songs, setCurrentSong, audioRef, isPlaying, setSongs
 }) => {
-  const songSelectHandler = () => {
-    setCurrentSong(song)
+  const songSelectHandler = async () => {
+    await setCurrentSong(song)
     // Add Active State
     const newSongs = songs.map(item => {
-      return item.id === song.id ?
-        { ...item, active: true } :
-        { ...item, active: false }
+      return item.id === song.id ? { ...item, active: true } : { ...item, active: false }
     })
     setSongs(newSongs)
 
     // Check if the song is playing
-    if (isPlaying) {
-      const playPromise = audioRef.current.play()
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          audioRef.current.play()
-        })
-      }
-    }
+    if (isPlaying) audioRef.current.play()
   }
 
   return (
