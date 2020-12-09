@@ -1,5 +1,5 @@
 
-# Preview:  https://www.youtube.com/watch?v=CXEyW9TRd1c&feature=youtu.be
+# Preview:  https://youtu.be/CXEyW9TRd1c
 
 # Getting Started with Create React App
 
